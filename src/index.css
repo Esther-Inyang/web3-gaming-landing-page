@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*  Mobile: 375px
+- Desktop: 1440px */
+
+color {
+  color: hsl(35, 77%, 62%);
+  color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  color: hsl(233, 8%, 79%);
+  color: hsl(236, 13%, 42%);
+  color: hsl(240, 100%, 5%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* font: 400, 700, 800 */
+  background-color: white;
+}
+
+.nav {
+}
+
+/*
+For normal html in public folder
+
+ nav a.active {
+  color: green;
+  font-weight: 800;
+} */
+
+.logo-bars-container {
+}
+
+.toggle-menu-bars {
+  font-size: 1.5rem;
+  color: hsl(205, 78%, 60%);
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.toggle-menu-bars:hover {
+  color: hsl(205, 86%, 17%);
+  transform: rotate(90deg);
+}
+
+.menu-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.menu-ul {
+}
+
+.menu-li {
+}
+
+.menu-link {
+}
+
+.menu-social-container {
+}
+
+/* App.js */
+.social-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Socialmedia.js */
+.social-media-section {
+}
+
+.social-links-container {
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-link-li {
+  list-style-type: none;
+}
+
+.social-link {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+  .toggle-menu-bars {
+    display: none;
+  }
+
+  .menu-container {
+    height: auto !important;
+    overflow: hidden;
+  }
+}
