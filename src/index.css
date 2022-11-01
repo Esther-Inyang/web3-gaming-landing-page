@@ -99,6 +99,87 @@ For normal html in public folder
 .social-link {
 }
 
+/* Page Content styles */
+.hero-img-div {
+  width: 100%;
+  height: 15rem;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+}
+
+.read-more-btn {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(5, 85%, 63%);
+}
+
+.whats-new-section {
+  padding: 1.5rem;
+  background-color: hsl(240, 100%, 5%);
+}
+
+.whats-new-section h2 {
+  font-weight: 700;
+  color: hsl(35, 77%, 62%);
+}
+
+.new-text {
+  padding: 1rem 0;
+}
+
+.new-text h3 {
+  color: hsl(36, 100%, 99%);
+  margin-bottom: 1rem;
+}
+
+.new-text p {
+  line-height: 1.7;
+  color: hsl(233, 8%, 79%);
+}
+
+.underline {
+  margin-top: 1rem;
+  border-bottom: 1px solid hsl(233, 8%, 79%);
+}
+
+.product-review-section {
+}
+
+.review-container {
+  width: 100%;
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.product-img-div {
+  height: 100%;
+}
+
+.product-img {
+}
+
+.review {
+}
+
+.review-number {
+}
+
+.product-title {
+}
+
+.review-text {
+}
+
 @media screen and (min-width: 768px) {
 }
 
