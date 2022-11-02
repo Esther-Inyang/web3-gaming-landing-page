@@ -3,22 +3,16 @@ import Navbar from "./Navbar";
 import Content from "./Content";
 import Socialmedia from "./Socialmedia";
 import "./index.css";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import { Routes, Route } from "react-router-dom";
+// import Home from "./pages/Home";
+// import About from "./pages/About";
+// import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Navbar />
 
       <div className="app-contents">
-        <div className="Router-container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </div>
         <div>
           <Content />
         </div>

@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import { menuLinks } from "./data";
+// import { menuLinks } from "./data";
 import { FaBars } from "react-icons/fa";
 import logo from "./images/logo.svg";
 import "./index.css";
 import Socialmedia from "./Socialmedia";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -21,40 +22,47 @@ function Navbar() {
     }
   }, [showMenu]);
 
-  // Note: isActive is destructured from default <NavLink> element
-  const navLinkStyles = ({ isActive }) => {
-    return {
-      fontWeight: isActive ? "600px" : "normal",
-      color: isActive ? "pink" : "black",
-    };
-  };
+  // const navLinkStyles = ({ isActive }) => {
+  //   return {
+  //     fontWeight: isActive ? "600px" : "200px",
+  //     color: isActive ? "pink" : "black",
+  //   };
+  // };
 
   return (
-    <div>
-      <header>
-        <section className="nav">
-          <div className="links">
-            <nav>
-              <NavLink style={navLinkStyles} end to="/">
-                HOME
-              </NavLink>
-              <NavLink style={navLinkStyles} to="/about">
-                ABOUT
-              </NavLink>
-            </nav>
-          </div>
+    <header className="header">
+      <section className="nav-section">
+        <div ref={menuContainerRef} className="nav-container">
+          <nav ref={menuRef} className="nav">
+            <Link to="#" smooth className="link">
+              HOME
+            </Link>
+            <Link to="#new" smooth className="link">
+              NEW
+            </Link>
+            <Link to="#new" smooth className="link">
+              POPULAR
+            </Link>
+            <Link to="#trending" smooth className="link">
+              TRENDING
+            </Link>
+            <Link to="#categories" smooth className="link">
+              CATEGORIES
+            </Link>
+          </nav>
+        </div>
 
-          <div className="logo-bars-container">
-            <img src={logo} alt="logo" className="logo" />
-            <button
-              className="toggle-menu-bars"
-              onClick={() => setShowMenu(!showMenu)}
-            >
-              <FaBars />
-            </button>
-          </div>
+        <div className="logo-bars-container">
+          <img src={logo} alt="logo" className="logo" />
+          <button
+            className="toggle-menu-bars"
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <FaBars />
+          </button>
+        </div>
 
-          <div className="menu-container" ref={menuContainerRef}>
+        {/* <div className="menu-container" ref={menuContainerRef}>
             <ul className="menu-ul" ref={menuRef}>
               {menuLinks.map((link) => {
                 const { id, path, text } = link;
@@ -67,13 +75,12 @@ function Navbar() {
                 );
               })}
             </ul>
-          </div>
-        </section>
-        <div className="menu-social-container">
-          <Socialmedia />
-        </div>
-      </header>
-    </div>
+          </div> */}
+      </section>
+      <div className="menu-social-container">
+        <Socialmedia />
+      </div>
+    </header>
   );
 }
 

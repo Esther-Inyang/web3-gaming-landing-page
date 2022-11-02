@@ -15,7 +15,9 @@ function Content() {
           <div className="hero-img-div">
             <img src={hero} alt="hero" className="hero-img" />
           </div>
-          <h1>The Bright Future of Web 3.0?</h1>
+          <h1 className="trending-title" id="trending">
+            The Bright Future of Web 3.0?
+          </h1>
           <div>
             <p className="texts">
               We dive into the next evolution of the web that claims to put the
@@ -26,7 +28,9 @@ function Content() {
           </div>
         </section>
         <section className="whats-new-section">
-          <h2 className="title-new">New</h2>
+          <h2 className="title-new" id="new">
+            New
+          </h2>
 
           <div className="new-text">
             <h3>Hydrogen VS Electric Cars</h3>
@@ -53,48 +57,48 @@ function Content() {
           </div>
         </section>
 
-        <section className="product-review-section">
-          <div className="review-container">
+        <section className="product-category-section">
+          <div className="product-container">
             <div className="product-img-div">
               <img src={img1} alt="about gaming" className="product-img" />
             </div>
-            <div className="review">
-              <h4 className="review-number">01</h4>
+            <div className="product-details" id="categories">
+              <h4 className="product-number">01</h4>
               <h4 className="product-title">Reviving Retro PCs</h4>
-              <p className="review-text">
+              <p className="product-text">
                 What happens when old PCs are given modern upgrade
               </p>
             </div>
           </div>
 
-          <div className="review-container">
+          <div className="product-container">
             <div className="product-img-div">
               <img src={img2} alt="about gaming" className="product-img" />
             </div>
-            <div className="review">
-              <h4 className="review-no">02</h4>
+            <div className="product-details">
+              <h4 className="product-number">02</h4>
               <h4 className="product-title">Top 10 Laptops of 2022</h4>
-              <p className="review-text">
+              <p className="product-text">
                 Our best picks for various needs and budgets
               </p>
             </div>
           </div>
 
-          <div className="review-container">
+          <div className="product-container">
             <div className="product-img-div">
               <img src={img3} alt="about gaming" className="product-img" />
             </div>
-            <div className="review">
-              <h4 className="review-no">03</h4>
+            <div className="product-details">
+              <h4 className="product-number">03</h4>
               <h4 className="product-title">The Growth of Gaming</h4>
-              <p className="review-text">
+              <p className="product-text">
                 How the pandemic has sparked fresh opportunities.
               </p>
             </div>
           </div>
         </section>
 
-        <div class="attribution">
+        <div className="attribution">
           Challenge by{" "}
           <Link
             to="https://www.frontendmentor.io?ref=challenge"
