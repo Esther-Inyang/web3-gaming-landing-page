@@ -19,67 +19,115 @@ color {
 }
 
 body {
+  position: relative;
   font-family: "Inter", sans-serif;
-  /* font: 400, 700, 800 */
-  background-color: white;
+  background-color: hsl(36, 100%, 99%);
 }
-
-/*
-For normal html in public folder
-
- nav a.active {
-  color: green;
-  font-weight: 800;
-} */
 
 /* Navbar.js */
 .header {
+  /* background-color: blue;
+  padding: 1rem; */
 }
 
 .nav-section {
+  /* padding: 2rem;
+  background-color: green; */
 }
 
-.nav-container {
-  height: 0;
-  overflow: hidden;
-  transition: all 0.2s linear;
-}
-
-.nav {
-}
-
-.link {
-}
-
+/* menu bars icons */
 .logo-bars-container {
+  padding: 1rem 1rem 0;
+  /* margin-bottom: 2rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(36, 100%, 99%);
 }
 
-.toggle-menu-bars {
-  font-size: 1.5rem;
-  color: hsl(205, 78%, 60%);
-  background: transparent;
-  border-color: transparent;
+.logo {
+  width: 3rem;
+  height: 2rem;
+}
+
+/* open menu icon*/
+.open-menu-bars-div {
+}
+
+.open-menu-bars {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.open-menu-bars,
+.close-menu-icon {
   transition: all 0.3s linear;
   cursor: pointer;
 }
 
-.toggle-menu-bars:hover {
-  color: hsl(205, 86%, 17%);
+.open-menu-bars:hover {
   transform: rotate(90deg);
 }
 
-.menu-social-container {
+/* close menu icon*/
+.close-menu-icon-div {
+  width: 100%;
+  text-align: right;
 }
 
-/* App.js */
-.social-component {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+.close-menu-icon {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.close-menu-icon:hover {
+  color: hsl(205, 86%, 17%);
+  transform: rotate(50%);
+}
+
+/* menu */
+.nav-container {
+  width: 70%;
+  background-color: greenyellow;
+
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s linear;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.nav {
+  /* width: 70%; */
+  padding: 1rem;
+  background-color: yellow;
+}
+
+.menu {
+  padding: 1rem;
+  background-color: pink;
+}
+
+.link {
+  display: block;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  background-color: gainsboro;
+}
+
+.link:hover {
+  padding-left: 1rem;
+  background-color: antiquewhite;
+}
+
+.social-in-navbar {
 }
 
 /* Socialmedia.js */
@@ -98,15 +146,28 @@ For normal html in public folder
 }
 
 .social-link {
+  font-size: 1.3rem;
+  padding: 0 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  color: hsl(205, 94%, 40%);
+}
+
+.social-link:hover {
+  color: hsl(205, 86%, 17%);
 }
 
 /* Content.js */
 .hero-section {
+  margin-top: 2rem;
 }
 
 .hero-img-div {
   width: 100%;
   height: 15rem;
+  background-image: url("./images/image-web-3-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-img {
@@ -114,16 +175,41 @@ For normal html in public folder
   height: 100%;
 }
 
-.trending-title .text {
+.trending-section {
+  padding: 2rem 1rem 0;
+}
+
+.trending-title {
+  font-size: 2.9rem;
+  font-weight: 800;
+  text-shadow: 0.5px 0px 1px black;
+}
+
+.trending-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-top: 1.2rem;
+  color: hsl(236, 13%, 42%);
+  text-shadow: 0.5px 0px 1px black;
 }
 
 .read-more-btn {
   font-size: 0.8rem;
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
+  margin: 2rem 0 3rem;
+  padding: 1rem 1.5rem;
   text-transform: uppercase;
   color: hsl(36, 100%, 99%);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  letter-spacing: 0.3rem;
   background-color: hsl(5, 85%, 63%);
+}
+
+.read-more-btn:hover {
+  background-color: hsl(5, 81%, 49%);
 }
 
 .whats-new-section {
@@ -132,21 +218,24 @@ For normal html in public folder
 }
 
 .whats-new-section h2 {
+  font-size: 2rem;
   font-weight: 700;
   color: hsl(35, 77%, 62%);
 }
 
-.new-text {
+.new-section__details {
   padding: 1rem 0;
 }
 
-.new-text h3 {
+.new-section__details h3 {
+  font-size: 1.4rem;
   color: hsl(36, 100%, 99%);
   margin-bottom: 1rem;
 }
 
-.new-text p {
-  line-height: 1.7;
+.new-section__details p {
+  font-size: 1.2rem;
+  line-height: 1.5;
   color: hsl(233, 8%, 79%);
 }
 
@@ -181,9 +270,7 @@ For normal html in public folder
   width: 60%;
   padding-right: 1rem;
   display: flex;
-  /* gap: 1rem; */
   flex-direction: column;
-  /* align-items: center; */
   justify-content: space-between;
 }
 
@@ -195,7 +282,6 @@ For normal html in public folder
 .product-title {
   font-weight: 800;
   font-size: 1.05rem;
-  /* line-height: 1; */
   color: hsl(240, 100%, 5%);
 }
 
@@ -205,16 +291,46 @@ For normal html in public folder
   color: hsl(236, 13%, 42%);
 }
 
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: hsl(240, 100%, 5%);
+}
+
+.attribution span {
+  font-weight: 600;
+  color: hsl(233, 8%, 79%);
+}
+
+.attribution-link {
+  color: hsl(5, 72%, 52%);
+  margin: 0 0.1rem 0 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.attribution-link:hover {
+  color: hsl(35, 77%, 62%);
+}
+
 @media screen and (min-width: 768px) {
 }
 
 @media screen and (min-width: 992px) {
-  .toggle-menu-bars {
+  .open-menu {
     display: none;
   }
 
-  .menu-container {
+  .nav-container {
     height: auto !important;
     overflow: hidden;
+  }
+
+  .hero-img-div {
+    width: 100%;
+    height: 15rem;
+    background-image: url("./images/image-web-3-desktop.jpg");
   }
 }

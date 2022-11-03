@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 // import { menuLinks } from "./data";
-import { FaBars } from "react-icons/fa";
+import menuBars from "./images/icon-menu.svg";
+import menuBarsClose from "./images/icon-menu-close.svg";
+// import { FaBars } from "react-icons/fa";
 import logo from "./images/logo.svg";
 import "./index.css";
 import Socialmedia from "./Socialmedia";
@@ -13,73 +15,72 @@ function Navbar() {
   const menuRef = useRef(null);
 
   useEffect(() => {
-    const menuLinksHeight = menuRef.current.getBoundingClientRect().height;
+    // NOTE: The commented codes are used if the height of the menu container DEPENDS on the number of links in it and keeps growing if new items are added // WHILE: The uncommented codes means the menu container depends on the viewport height
+
+    // const menuLinksHeight = menuRef.current.getBoundingClientRect().height;
 
     if (showMenu) {
-      menuContainerRef.current.style.height = `${menuLinksHeight}px`;
+      // menuContainerRef.current.style.height = `${menuLinksHeight}px`;
+
+      menuContainerRef.current.style.height = `100vh`;
     } else {
       menuContainerRef.current.style.height = "0px";
     }
   }, [showMenu]);
 
-  // const navLinkStyles = ({ isActive }) => {
-  //   return {
-  //     fontWeight: isActive ? "600px" : "200px",
-  //     color: isActive ? "pink" : "black",
-  //   };
-  // };
-
   return (
     <header className="header">
       <section className="nav-section">
+        <div className="logo-bars-container">
+          <div className="logo-div">
+            <img src={logo} alt="logo" className="logo" />
+          </div>
+
+          <div className="open-menu-bars-div">
+            <img
+              src={menuBars}
+              alt="menu bars icon"
+              className="open-menu-bars"
+              onClick={() => setShowMenu(true)}
+            />
+          </div>
+        </div>
+
         <div ref={menuContainerRef} className="nav-container">
           <nav ref={menuRef} className="nav">
-            <Link to="#" smooth className="link">
-              HOME
-            </Link>
-            <Link to="#new" smooth className="link">
-              NEW
-            </Link>
-            <Link to="#new" smooth className="link">
-              POPULAR
-            </Link>
-            <Link to="#trending" smooth className="link">
-              TRENDING
-            </Link>
-            <Link to="#categories" smooth className="link">
-              CATEGORIES
-            </Link>
+            <div className="close-menu-icon-div">
+              <img
+                src={menuBarsClose}
+                alt="menu bars icon"
+                className="close-menu-icon"
+                onClick={() => setShowMenu(false)}
+              />
+            </div>
+
+            <div className="menu">
+              <Link to="#" smooth className="link">
+                HOME
+              </Link>
+              <Link to="#new" smooth className="link">
+                NEW
+              </Link>
+              <Link to="#new" smooth className="link">
+                POPULAR
+              </Link>
+              <Link to="#trending" smooth className="link">
+                TRENDING
+              </Link>
+              <Link to="#categories" smooth className="link">
+                CATEGORIES
+              </Link>
+            </div>
+
+            <div className="menu-social-container social-in-navbar">
+              <Socialmedia />
+            </div>
           </nav>
         </div>
-
-        <div className="logo-bars-container">
-          <img src={logo} alt="logo" className="logo" />
-          <button
-            className="toggle-menu-bars"
-            onClick={() => setShowMenu(!showMenu)}
-          >
-            <FaBars />
-          </button>
-        </div>
-
-        {/* <div className="menu-container" ref={menuContainerRef}>
-            <ul className="menu-ul" ref={menuRef}>
-              {menuLinks.map((link) => {
-                const { id, path, text } = link;
-                return (
-                  <li key={id} className="menu-li">
-                    <a href={path} className="menu-link">
-                      {text}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div> */}
       </section>
-      <div className="menu-social-container">
-        <Socialmedia />
-      </div>
     </header>
   );
 }

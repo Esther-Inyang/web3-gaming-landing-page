@@ -1,25 +1,26 @@
 import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
-import hero from "./images/image-web-3-mobile.jpg";
+// import hero from "./images/image-web-3-mobile.jpg";
 import img1 from "./images/image-retro-pcs.jpg";
 import img2 from "./images/image-top-laptops.jpg";
 import img3 from "./images/image-gaming-growth.jpg";
+import Socialmedia from "./Socialmedia";
 
 function Content() {
   return (
     <main>
       <section className="content-section">
-        <h1>content section</h1>
         <section className="hero-section">
           <div className="hero-img-div">
-            <img src={hero} alt="hero" className="hero-img" />
+            {/* <img src={hero} alt="hero" className="hero-img" /> */}
           </div>
-          <h1 className="trending-title" id="trending">
-            The Bright Future of Web 3.0?
-          </h1>
-          <div>
-            <p className="texts">
+          <div className="trending-section">
+            <h1 className="trending-title" id="trending">
+              The Bright Future of Web 3.0?
+            </h1>
+
+            <p className="trending-text">
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
@@ -32,13 +33,13 @@ function Content() {
             New
           </h2>
 
-          <div className="new-text">
+          <div className="new-section__details">
             <h3>Hydrogen VS Electric Cars</h3>
             <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
             <div className="underline"></div>
           </div>
 
-          <div className="new-text">
+          <div className="new-section__details">
             <h3>The Downsides of AI Artistry</h3>
             <p>
               What are the possible adverse effects of on-demand AI image
@@ -47,7 +48,7 @@ function Content() {
             <div className="underline"></div>
           </div>
 
-          <div className="new-text">
+          <div className="new-section__details">
             <h3>Is VC Funding Drying Up?</h3>
             <p>
               Private funding by VC firms is down 50% YOY. We take a look at
@@ -98,16 +99,29 @@ function Content() {
           </div>
         </section>
 
+        <div className="social-component">
+          <div>
+            <Socialmedia />
+          </div>
+        </div>
+
         <div className="attribution">
-          Challenge by{" "}
+          <span>Challenge by</span>
           <Link
             to="https://www.frontendmentor.io?ref=challenge"
             target="_blank"
+            className="attribution-link"
           >
             Frontend Mentor
           </Link>
-          . Coded by{" "}
-          <Link to="https://www.github.com/esther-inyang">Your Name Here</Link>.
+          <span> . Coded by</span>
+          <Link
+            to="https://www.github.com/esther-inyang"
+            className="attribution-link"
+          >
+            Dev Esti
+          </Link>
+          <span>.</span>
         </div>
       </section>
     </main>
