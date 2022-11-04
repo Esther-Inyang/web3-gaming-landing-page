@@ -500,9 +500,9 @@ body {
     display: none;
   }
 
-  .content-center {
+  /* .content-center {
     padding: 0 1rem;
-  }
+  } */
 
   .hero-section {
     width: 60%;
@@ -544,6 +544,8 @@ body {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
+    padding: 2rem 1rem;
+    background-color: hsl(220, 27%, 98%);
   }
 
   .whats-new-section {
