@@ -9,7 +9,7 @@
 /*  Mobile: 375px
 - Desktop: 1440px */
 
-color {
+colors {
   color: hsl(35, 77%, 62%);
   color: hsl(5, 85%, 63%);
   color: hsl(36, 100%, 99%);
@@ -125,7 +125,7 @@ body {
 
 .link {
   display: block;
-  padding: 1.5rem;
+  padding: 0.8rem 1.5rem;
   cursor: pointer;
   font-size: 1.3rem;
   font-weight: 400;
@@ -145,7 +145,7 @@ body {
 .social-in-navbar {
   display: grid;
   place-items: center;
-  padding: 1.2rem 0;
+  padding: 0 0 3rem;
 }
 
 /* Socialmedia.js */
