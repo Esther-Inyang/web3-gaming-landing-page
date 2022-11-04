@@ -274,6 +274,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  padding: 1rem;
 }
 
 .product-container {
@@ -443,6 +444,7 @@ body {
   .product-category-section {
     margin: 4rem 0;
     gap: 4rem;
+    padding: 2rem;
   }
 
   .product-container {
@@ -567,6 +569,7 @@ body {
     margin: 5rem 0;
     flex-direction: row;
     gap: 1.7rem;
+    padding: 0;
   }
 
   .product-container {
