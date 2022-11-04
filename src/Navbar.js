@@ -32,7 +32,7 @@ function Navbar() {
     <header className="header">
       <section className="nav-section">
         <div className="logo-bars-container">
-          <div className="logo-div">
+          <div className="logo-div" id="home">
             <img src={logo} alt="logo" className="logo" />
           </div>
 
@@ -57,21 +57,21 @@ function Navbar() {
               />
             </div>
 
-            <div className="menu">
-              <Link to="#" smooth className="link">
-                HOME
+            <div className="menu" onClick={() => setShowMenu(false)}>
+              <Link to="#home" smooth className="link">
+                Home
               </Link>
               <Link to="#new" smooth className="link">
-                NEW
+                New
               </Link>
               <Link to="#new" smooth className="link">
-                POPULAR
+                Popular
               </Link>
               <Link to="#trending" smooth className="link">
-                TRENDING
+                Trending
               </Link>
               <Link to="#categories" smooth className="link">
-                CATEGORIES
+                Categories
               </Link>
             </div>
 
